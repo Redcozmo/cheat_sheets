@@ -243,3 +243,4 @@ Creation d'un pipeline :
 
 Pour partager la même BDD entre une app 1 staging et une app 2 en prod par exemple, exécuter cette commande :
 `$ heroku addons:attach app-1::DATABASE --app app-2`
+lien : https://devcenter.heroku.com/articles/heroku-postgresql#sharing-heroku-postgres-between-applications
