@@ -227,3 +227,19 @@ Créer un SCHEMA de la base de donnée de rails en pdf :
 3. Lancer la commande de création : `$ rake erd`
 
 --> un pdf "erd.pdf" a été sauvegardé à la racine de votre projet rails.
+
+
+
+<br>
+
+### HEROKU
+
+Penser à : 
+`$ heroku run rails db:migrate`
+`$ heroku run rails db:seed`
+
+Creation d'un pipeline :
+`à remplir`
+
+Pour partager la même BDD entre une app 1 staging et une app 2 en prod par exemple, exécuter cette commande :
+`$ heroku addons:attach app-1::DATABASE --app app-2`
