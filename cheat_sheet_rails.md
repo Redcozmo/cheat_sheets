@@ -249,3 +249,13 @@ Pour partager la même BDD entre une app 1 staging et une app 2 en prod par exem
 `$ heroku addons:attach app-1::DATABASE --app app-2`
 
 lien : https://devcenter.heroku.com/articles/heroku-postgresql#sharing-heroku-postgres-between-applications
+
+Pour mettre à zéro complètement une BDD (ATTENTION à ne pas faire ça sur la BDD en production toutes les données seront perdues !!) :
+
+`$ rails db:drop`
+
+`$ rails db:create`
+
+`$ rails db:migrate`
+
+`$ rails db:seed`
