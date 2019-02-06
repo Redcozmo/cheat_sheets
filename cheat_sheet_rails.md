@@ -1,5 +1,5 @@
 # CHEAT SHEET RAILS
-## RAILS - ACTIVERECORD - POSTGRESQL
+## RAILS - ACTIVERECORD - POSTGRESQL - HEROKU - CREDENTIALS
 <br>
 
 ### INIT
@@ -259,3 +259,33 @@ Pour mettre à zéro complètement une BDD (ATTENTION à ne pas faire ça sur la
 `$ rails db:migrate`
 
 `$ rails db:seed`
+
+### RAILS CREDENTIALS
+
+Rails 5.2 permet le stockage sécurisé de ses identifiants secrets.
+
+Deux fichiers importants :
+
+- credentials.yml.enc : contient les identifiants secrets cryptés. Tout étant crypté, il est possible de le laisser sur github.
+
+- master.key : contient la clé de cryptage qui permettra de décrypter le fichier credentials.yml.enc. Il ne faut SURTOUT PAS laisser ce fichier sur github. Il faut vérifier que ce fichier est bien mentionné dans le .gitignore.
+
+Comment procéder au stockage des identifiants ?
+
+- ```EDITOR="atom --wait" bin/rails credentials:edit``` ou un autre éditeur qu'Atom
+- le fichier credentials.yml.enc est ouvert décrypté (et d'ailleurs n'a plus le même nom) afin de pouvoir rentrer des identifiants
+- lorsque le fichier est enregistré et fermé il est crypté à nouveau
+
+- la structure du fichier est comme suit :
+
+```# nom de l'API
+nom_API:
+  access_key_id: value1
+  secret_access_key: value2```
+  
+  secret_key_base ?
+  
+- enfin l'accès aux valeurs se fait comme suit :
+
+```<%= Rails.application.credentials.dig(:nom_API, :access_key_id) %> --> value1```
+```<%= Rails.application.credentials.dig(:nom_API, :secret_access_key) %> --> value2```
