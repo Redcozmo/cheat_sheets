@@ -280,10 +280,11 @@ Comment procéder au stockage des identifiants ?
 
 La structure du fichier credentials.yml.enc est comme suit :
 
-`#nom de l'API
+```#nom de l'API
 nom_API:
-  access_key_id: value1
-  secret_access_key: value2`
+    access_key_id: value1
+    secret_access_key: value2
+```
 
 secret_key_base ?
   
