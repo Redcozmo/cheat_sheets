@@ -280,7 +280,8 @@ Comment procéder au stockage des identifiants ?
 
 La structure du fichier credentials.yml.enc est comme suit :
 
-```#nom de l'API
+```
+#nom de l'API
 nom_API:
     access_key_id: value1
     secret_access_key: value2
@@ -294,5 +295,5 @@ Enfin l'accès aux valeurs se fait comme suit :
 
 `<%= Rails.application.credentials.dig(:nom_API, :secret_access_key) %> --> value2`
 
-
+Et en PROD ?
  
