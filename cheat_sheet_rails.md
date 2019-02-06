@@ -272,18 +272,18 @@ Deux fichiers importants :
 
 Comment procéder au stockage des identifiants ?
 
-1 `$ EDITOR="atom --wait" bin/rails credentials:edit` ou un autre éditeur qu'Atom.
+1. `$ EDITOR="atom --wait" bin/rails credentials:edit` ou un autre éditeur qu'Atom.
 
-2 le fichier credentials.yml.enc est ouvert décrypté (et d'ailleurs n'a plus le même nom) afin de pouvoir rentrer des identifiants.
+2. le fichier credentials.yml.enc est ouvert décrypté (et d'ailleurs n'a plus le même nom) afin de pouvoir rentrer des identifiants.
 
-3 lorsque le fichier est enregistré et fermé il est crypté à nouveau.
+3. lorsque le fichier est enregistré et fermé il est crypté à nouveau.
 
 La structure du fichier credentials.yml.enc est comme suit :
 
-  #nom de l'API
-  nom_API:
-    access_key_id: value1
-    secret_access_key: value2
+`#nom de l'API
+nom_API:
+  access_key_id: value1
+  secret_access_key: value2`
 
 secret_key_base ?
   
