@@ -262,33 +262,36 @@ Pour mettre à zéro complètement une BDD (ATTENTION à ne pas faire ça sur la
 
 ### RAILS CREDENTIALS
 
-Rails 5.2 permet le stockage sécurisé de ses identifiants secrets.
+Rails 5.2 permet le _stockage sécurisé de ses identifiants secrets_.
 
 Deux fichiers importants :
 
-- credentials.yml.enc : contient les identifiants secrets cryptés. Tout étant crypté, il est possible de le laisser sur github.
+- **credentials.yml.enc** : contient les identifiants secrets cryptés. Tout étant crypté, il est possible de le laisser sur github.
 
-- master.key : contient la clé de cryptage qui permettra de décrypter le fichier credentials.yml.enc. Il ne faut SURTOUT PAS laisser ce fichier sur github. Il faut vérifier que ce fichier est bien mentionné dans le .gitignore.
+- **master.key** : contient la clé de cryptage qui permettra de décrypter le fichier credentials.yml.enc. Il ne faut SURTOUT PAS laisser ce fichier sur github. Il faut vérifier que ce fichier est bien mentionné dans le .gitignore.
 
 Comment procéder au stockage des identifiants ?
 
-1 ```$ EDITOR="atom --wait" bin/rails credentials:edit``` ou un autre éditeur qu'Atom
-2 le fichier credentials.yml.enc est ouvert décrypté (et d'ailleurs n'a plus le même nom) afin de pouvoir rentrer des identifiants
-3 lorsque le fichier est enregistré et fermé il est crypté à nouveau
+1 `$ EDITOR="atom --wait" bin/rails credentials:edit` ou un autre éditeur qu'Atom.
+
+2 le fichier credentials.yml.enc est ouvert décrypté (et d'ailleurs n'a plus le même nom) afin de pouvoir rentrer des identifiants.
+
+3 lorsque le fichier est enregistré et fermé il est crypté à nouveau.
 
 La structure du fichier credentials.yml.enc est comme suit :
 
-  # nom de l'API
+  ```# nom de l'API
   nom_API:
     access_key_id: value1
-    secret_access_key: value2
+    secret_access_key: value2```
 
  secret_key_base ?
   
 Enfin l'accès aux valeurs se fait comme suit :
 
-```<%= Rails.application.credentials.dig(:nom_API, :access_key_id) %> --> value1```
-```<%= Rails.application.credentials.dig(:nom_API, :secret_access_key) %> --> value2```
+`<%= Rails.application.credentials.dig(:nom_API, :access_key_id) %> --> value1`
+
+`<%= Rails.application.credentials.dig(:nom_API, :secret_access_key) %> --> value2`
 
 
  
