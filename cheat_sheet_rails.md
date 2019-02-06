@@ -262,6 +262,8 @@ Pour mettre à zéro complètement une BDD (ATTENTION à ne pas faire ça sur la
 
 ### RAILS CREDENTIALS
 
+https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336
+
 Rails 5.2 permet le _stockage sécurisé de ses identifiants secrets_.
 
 Deux fichiers importants :
@@ -295,5 +297,12 @@ Enfin l'accès aux valeurs se fait comme suit :
 
 `<%= Rails.application.credentials.dig(:nom_API, :secret_access_key) %> --> value2`
 
-Et en PROD ?
+#### Et en PROD comment ça fonctionne ?
+
+Heroku ne connait pas la clé de décryptage du fichier master.key car il n'existe pas ailleurs qu'en local.
+
+Il faut créer une variable dans l'app heroku. Aller dans l'app heroku et --> settings --> Config Vars puis créer une variable nommé `RAILS_MASTER_KEY` avec la clé contenu dans le master.key. Cette clé restera côté serveur.
+
+
+
  
