@@ -234,15 +234,27 @@ Créer un SCHEMA de la base de donnée de rails en pdf :
 
 ### HEROKU
 
+Une fois l'app créée, se mettre dans le dossier et : 
+
+`$ heroku create nom-app`
+
+Puis :
+
+`$ git push heroku master`
+
+Créer le pipeline heroku et brancher l'app précédemment créée sur le staging.
+
+Configurer l'automatic deployement ce qui permet à l'application heroku de se mettre à jour dès que le master sur github est modifié.
+
+Créer une nouvelle application 'nom-app-prod' et la brancher en PRODUCTION sur le pipeline.
+ 
 Penser à : 
 
 `$ heroku run rails db:migrate`
 
 `$ heroku run rails db:seed`
 
-Creation d'un pipeline :
 
-`à remplir`
 
 Pour partager la même BDD entre une app 1 staging et une app 2 en prod par exemple, exécuter cette commande :
 
