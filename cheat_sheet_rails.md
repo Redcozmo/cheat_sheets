@@ -250,9 +250,9 @@ Créer une nouvelle application 'nom-app-prod' et la brancher en PRODUCTION sur 
  
 Penser à : 
 
-`$ heroku run rails db:migrate`
+`$ heroku run rails db:migrate` avec de façon optionnelle `--app [nom-de-l-app]`
 
-`$ heroku run rails db:seed`
+`$ heroku run rails db:seed` avec de façon optionnelle `--app [nom-de-l-app]`
 
 
 
@@ -262,15 +262,11 @@ Pour partager la même BDD entre une app 1 staging et une app 2 en prod par exem
 
 lien : https://devcenter.heroku.com/articles/heroku-postgresql#sharing-heroku-postgres-between-applications
 
+Par contre, dans le cadre professionel, la base de données en prod est souvent accessible uniquement par le client et le développeur n'y a pas accès pour des raisons de confidentialité des données. 
+
 Pour mettre à zéro complètement une BDD (ATTENTION à ne pas faire ça sur la BDD en production toutes les données seront perdues !!) :
 
-`$ rails db:drop`
-
-`$ rails db:create`
-
-`$ rails db:migrate`
-
-`$ rails db:seed`
+`$ rails db:drop db:create db:migrate db:seed`
 
 ### RAILS CREDENTIALS
 
