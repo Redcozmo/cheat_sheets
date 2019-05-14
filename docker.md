@@ -27,3 +27,7 @@ If you don't want to delete all the Docker volumes on your computer, you can sea
 Recreating the volumes is as simple as restarting the application
 
 `$ docker-compose up --build`
+
+### Lunch docker
+
+`$ docker-compose up`
