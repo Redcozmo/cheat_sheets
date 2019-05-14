@@ -20,6 +20,7 @@ Once all the containers are deleted, you can delete all the Docker volumes on yo
 If you don't want to delete all the Docker volumes on your computer, you can search for a specific one and deleting it
 
 `$ docker volume ls`
+
 `$ docker volume rm <name_of_volume>`
 
 ### Recreating the volumes
