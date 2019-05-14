@@ -29,6 +29,27 @@ Recreating the volumes is as simple as restarting the application
 
 `$ docker-compose up --build`
 
-### Lunch docker
 
-`$ docker-compose up`
+## DOCKER COMPOSE
+
+`docker-compose up` launch services in docker-compose.yml
+
+`docker-compose up -d` launch services in docker-compose.yml with keeping hand on terminal
+
+`docker-compose up –build` re-build services before launch
+
+`docker-compose down` stop services
+
+`docker-compose restart` re-launch all services
+
+`docker-compose restart name_of_service` re-launch a service
+
+`docker-compose exec rails bash` bash console in the rails container
+
+`docker-compose exec rails bin/rails db:migrate` execute a rails db:migrate in rails container
+
+`docker-compose logs` all services logs from last launch and give back hand on terminal
+
+`docker-compose logs -f` listening all services logs from last launch without giving back hand on terminal
+
+`docker-compose logs -f rails` listening rails service logs from last launch without giving back hand on terminal
