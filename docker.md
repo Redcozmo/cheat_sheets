@@ -32,6 +32,8 @@ Recreating the volumes is as simple as restarting the application
 
 ## DOCKER COMPOSE
 
+from : https://web.leikir.io/docker-compose-un-outil-desormais-indispensable/
+
 `docker-compose up` launch services in docker-compose.yml
 
 `docker-compose up -d` launch services in docker-compose.yml with keeping hand on terminal
