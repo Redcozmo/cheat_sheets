@@ -1,4 +1,4 @@
-```WARNING RVM SETUP USING GEMSET
+WARNING RVM SETUP USING GEMSET
 if you encounter some trouble with somes install like $ rails generate rspec:install, and you get:
     
     Ignoring bindex-0.7.0 because its extensions are not built.  Try: gem pristine bindex --version 0.7.0
@@ -7,7 +7,8 @@ if you encounter some trouble with somes install like $ rails generate rspec:ins
 
 try to fix with = rvm get stable --auto-dotfiles
 
-source: https://github.com/rvm/rvm/issues/3788``` 
+source: https://github.com/rvm/rvm/issues/3788
+
 
 GEMSET
 
