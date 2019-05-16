@@ -1,16 +1,3 @@
-## WARNING RVM SETUP USING GEMSET
-
-if you encounter some trouble with somes install like $ rails generate rspec:install, and you get:
-    
-    Ignoring bindex-0.7.0 because its extensions are not built.  Try: gem pristine bindex --version 0.7.0
-    Ignoring bootsnap-1.4.3 because its extensions are not built.  Try: gem pristine bootsnap --version 1.4.3
-    Ignoring byebug-11.0.1 because its extensions are not built.  Try: gem pristine byebug --version
-
-try to fix with = rvm get stable --auto-dotfiles
-
-source: https://github.com/rvm/rvm/issues/3788
-
-
 ## GEMSET
 
 ### CHECK les versions
@@ -50,6 +37,10 @@ and differents gems specified and installed.
     $ gem bundle update --bundler --> this not work ? gem update ?
     $ ...
 
+
+### Path of the gemset being used by a Rails application
+
+    `$ rvm gemdir` in the folder app to know the path of the gemset being used by a Rails application
 
 
 ### WARNING RVM SETUP USING GEMSET
