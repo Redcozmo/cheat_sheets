@@ -25,6 +25,10 @@
 ### USE your gemset inside your new project folder
     
     $ rvm 2.6.2@name_of_your_project
+    
+### CLEAN gemsets
+
+    & rvm gemset empty [gemset_name]
 
 
 ### INSTALL GEMS needed for your project inside your gemset
