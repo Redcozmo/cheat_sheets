@@ -1,4 +1,4 @@
-# Cheat_Sheet (merde merde ?)
+# Cheat_Sheet
 Quelques trucs à se rappeler
 
 Mise en forme des README : _[markdown](https://guides.github.com/features/mastering-markdown/)_
