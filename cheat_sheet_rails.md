@@ -234,7 +234,7 @@ Créer un SCHEMA de la base de donnée de rails en pdf :
 
 ### HEROKU
 
-Une fois l'app créée, se mettre dans le dossier et : 
+Une fois l'app rails créée, se mettre dans le dossier et : 
 
 `$ heroku create nom-app`
 
@@ -247,12 +247,14 @@ Créer le pipeline heroku et brancher l'app précédemment créée sur le stagin
 Configurer l'automatic deployement ce qui permet à l'application heroku de se mettre à jour dès que le master sur github est modifié.
 
 Créer une nouvelle application 'nom-app-prod' et la brancher en PRODUCTION sur le pipeline.
+
+Ajouter l'addon postgre sur l'app en prod.
  
 Penser à : 
 
-`$ heroku run rails db:migrate` avec de façon optionnelle `--app [nom-de-l-app]`
+`$ heroku run rails db:migrate` avec `--app [nom-de-l-app]`
 
-`$ heroku run rails db:seed` avec de façon optionnelle `--app [nom-de-l-app]`
+`$ heroku run rails db:seed` avec `--app [nom-de-l-app]`
 
 
 
