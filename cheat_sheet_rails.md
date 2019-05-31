@@ -256,7 +256,13 @@ Penser à :
 
 `$ heroku run rails db:seed` avec `--app [nom-de-l-app]`
 
+Pour drop la base en prod staging :
 
+`$ heroku pg:reset` with after confirmation with writting name of the app 
+
+ou
+
+`$ heroku pg:reset --confirm app-name`
 
 Pour partager la même BDD entre une app 1 staging et une app 2 en prod par exemple, exécuter cette commande :
 
