@@ -4,9 +4,10 @@
 
 Before you can sync, you need to add a remote that points to the upstream repository. You may have done this when you originally forked.
 
-** Tip: Syncing your fork only updates your local copy of the repository; it does not update your repository on GitHub.
+*Tip: Syncing your fork only updates your local copy of the repository; it does not update your repository on GitHub.*
 
-```$ git remote -v
+```
+$ git remote -v
 # List the current remotes
 origin  https://github.com/user/repo.git (fetch)
 origin  https://github.com/user/repo.git (push)
@@ -19,7 +20,8 @@ $ git remote -v
 origin    https://github.com/user/repo.git (fetch)
 origin    https://github.com/user/repo.git (push)
 upstream  https://github.com/otheruser/repo.git (fetch)
-upstream  https://github.com/otheruser/repo.git (push)```
+upstream  https://github.com/otheruser/repo.git (push)
+```
 
 ## Syncing
 
@@ -28,31 +30,37 @@ Fetching
 
 ## Fetching from the remote repository will bring in its branches and their respective commits. These are stored in your local repository under special branches.
 
-```$ git fetch upstream
+```
+$ git fetch upstream
 # Grab the upstream remote's branches
 remote: Counting objects: 75, done.
 remote: Compressing objects: 100% (53/53), done.
 remote: Total 62 (delta 27), reused 44 (delta 9)
 Unpacking objects: 100% (62/62), done.
 From https://github.com/otheruser/repo
- * [new branch]      master     -> upstream/master```
+ * [new branch]      master     -> upstream/master
+ ```
 
 ## We now have the upstream's master branch stored in a local branch, upstream/master
 
-```$ git branch -va
+```
+$ git branch -va
 # List all local and remote-tracking branches
 * master                  a422352 My local commit
   remotes/origin/HEAD     -> origin/master
   remotes/origin/master   a422352 My local commit
-  remotes/upstream/master 5fdff0f Some upstream commit```
+  remotes/upstream/master 5fdff0f Some upstream commit
+  ```
 
 ## Merging
 
 Now that we have fetched the upstream repository, we want to merge its changes into our local branch. This will bring that branch into sync with the upstream, without losing our local changes.
 
-```$ git checkout master
+```
+$ git checkout master
 # Check out our local master branch
-Switched to branch 'master'```
+Switched to branch 'master
+'```
 
 $ git merge upstream/master
 # Merge upstream's master into our own
