@@ -1,5 +1,7 @@
 # Syncing a fork
 
+https://help.github.com/en/articles/syncing-a-fork
+
 ## The Setup
 
 Before you can sync, you need to add a remote that points to the upstream repository. You may have done this when you originally forked.
