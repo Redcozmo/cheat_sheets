@@ -26,9 +26,10 @@ upstream  https://github.com/otheruser/repo.git (push)
 ## Syncing
 
 There are two steps required to sync your repository with the upstream: first you must fetch from the remote, then you must merge the desired branch into your local branch.
-Fetching
 
-## Fetching from the remote repository will bring in its branches and their respective commits. These are stored in your local repository under special branches.
+### Fetching
+
+Fetching from the remote repository will bring in its branches and their respective commits. These are stored in your local repository under special branches.
 
 ```
 $ git fetch upstream
@@ -41,7 +42,7 @@ From https://github.com/otheruser/repo
  * [new branch]      master     -> upstream/master
  ```
 
-## We now have the upstream's master branch stored in a local branch, upstream/master
+We now have the upstream's master branch stored in a local branch, upstream/master
 
 ```
 $ git branch -va
@@ -52,15 +53,14 @@ $ git branch -va
   remotes/upstream/master 5fdff0f Some upstream commit
   ```
 
-## Merging
+### Merging
 
 Now that we have fetched the upstream repository, we want to merge its changes into our local branch. This will bring that branch into sync with the upstream, without losing our local changes.
 
 ```
 $ git checkout master
 # Check out our local master branch
-Switched to branch 'master
-'```
+Switched to branch 'master'
 
 $ git merge upstream/master
 # Merge upstream's master into our own
@@ -71,11 +71,14 @@ Fast-forward
  2 files changed, 7 insertions(+), 9 deletions(-)
  delete mode 100644 README
  create mode 100644 README.md
+ ```
 
 If your local branch didn't have any unique commits, git will instead perform a "fast-forward":
 
+```
 $ git merge upstream/master
 Updating 34e91da..16c56ad
 Fast-forward
  README.md                 |    5 +++--
  1 file changed, 3 insertions(+), 2 deletions(-)
+```
