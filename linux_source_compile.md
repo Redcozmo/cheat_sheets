@@ -24,6 +24,7 @@ Apparemment cette solution ne règle pas le problème des dépendances.
 ## 3 - A partir des sources
 
 Télécharger le fichier source qui aura une archive compressée avec l'extension `.tar.gz`
+
 Extraire l'archive : `tar zxvf htop-0.8.3.tar.gz`
 
 ```
@@ -33,9 +34,23 @@ Extraire l'archive : `tar zxvf htop-0.8.3.tar.gz`
 ```
 
 Après le `./configure` il peut y avoir des erreurs, notamment des problèmes de dépendance.
+
 Il faut les régler avant de lancer le `make`et relancer ensuite le `./configure`.
 
-Exemple d'erreur du `./configure` pour installer **htop**
+# Exemples d'erreurs :
+
+** Extraction de l'archive : après le tar **
+
+```
+tar: This does not look like a tar archive
+tar: Skipping to next header
+tar: Exiting with failure status due to previous errors
+```
+
+`gzip -dc hello-0.2.tar.gz | tar -zxf -`
+
+** Après le `./configure` **
+(ici pour installer **htop**)
 
 ```configure: error: You may want to use --disable-unicode or install libncursesw```
 
