@@ -1,4 +1,4 @@
-# Compiler un programme depuis les sources
+# GNU/LINUX : Compiler un programme depuis les sources
 
 Rédigé à partir d'un cours sur OpenClassroom : [article](https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux/42370-compiler-un-programme-depuis-les-sources "Compiler un programme depuis les sources")
 
