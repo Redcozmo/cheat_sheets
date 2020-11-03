@@ -1,14 +1,34 @@
-Compiler un programme depuis les sources
+# Compiler un programme depuis les sources
+
+rédigé à partir de openclassroom : 
+https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linux/42370-compiler-un-programme-depuis-les-sources
 
 Trois solutions pour installer un programme sous LINUX :
 
-1 - Dépots : habituellement, les programmes sont disponibles dans des dépots et installables via apt-get.
-2 - Deb : Quand le programme n'existe pas on peut trouver un paquetage spécifique à une distribution (.deb pour Debian, .rpm pour RedHat)
-3 - Sources : quand le pquetage n'existe pas il faud compiler les sources 
+1. Dépots : habituellement, les programmes sont disponibles dans des dépots et installables via apt-get.
+2. Deb : Quand le programme n'existe pas on peut trouver un paquetage spécifique à une distribution (.deb pour Debian, .rpm pour RedHat)
+3. Sources : quand le pquetage n'existe pas il faud compiler les sources 
 
-1 - A partir des dépots
+## 1 - A partir des dépots
 
-2 - A partir d'un paquetage
+## 2 - A partir d'un paquetage
 
-3 - A partir des sources
+## 3 - A partir des sources
 
+./configure
+make
+sudo make install
+
+check errors
+manage errors
+on relance ./configure
+
+
+exemple d'erreur du ./configure
+configure: error: You may want to use --disable-unicode or install libncursesw
+Il faut chercher dans les dépôts de sa distribution, le paquet qui contient la librairie libncursesw.
+Par exemple, sous Ubuntu, "apt-file" permet de chercher un nom de fichier dans la liste des paquets des dépôts.
+Donc dans un premier temps installer le paquet apt-file à partir des dépôts
+Puis faire "apt-file search libncursesw"
+Et comme on souhaite compiler les sources d'un programme, il faut la version -dev de la lib.
+Dans mon cas j'ai pris : libncursesw5-dev: /usr/lib/x86_64-linux-gnu/libncursesw.a
