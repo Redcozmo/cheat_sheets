@@ -6,9 +6,9 @@ https://openclassrooms.com/fr/courses/43538-reprenez-le-controle-a-laide-de-linu
 
 Trois solutions pour installer un programme sous LINUX :
 
-1. *Dépôts offciels :* habituellement, les programmes sont disponibles dans des dépôts et installables via apt-get.
-2. *Paquetage :* quand le programme n'existe pas on peut trouver un paquetage spécifique à une distribution (.deb pour Debian, .rpm pour RedHat)
-3. *Sources :* quand le pquetage n'existe pas il faud compiler les sources 
+1. **Dépôts offciels :** habituellement, les programmes sont disponibles dans des dépôts et installables via apt-get.
+2. **Paquetage :** quand le programme n'existe pas on peut trouver un paquetage spécifique à une distribution (.deb pour Debian, .rpm pour RedHat)
+3. **Sources :** quand le pquetage n'existe pas il faud compiler les sources 
 
 ## 1 - A partir des dépôts
 
@@ -23,6 +23,9 @@ Apparemment cette solution ne règle pas le problème des dépendances.
 
 ## 3 - A partir des sources
 
+Télécharger le fichier source qui aura une archive compressée avec l'extension `.tar.gz`
+Extraire l'archive : `tar zxvf htop-0.8.3.tar.gz`
+
 ```
     ./configure
     make
@@ -32,7 +35,7 @@ Apparemment cette solution ne règle pas le problème des dépendances.
 Après le `./configure` il peut y avoir des erreurs, notamment des problèmes de dépendance.
 Il faut les régler avant de lancer le `make`et relancer ensuite le `./configure`.
 
-Exemple d'erreur du `./configure` pour installer *htop*
+Exemple d'erreur du `./configure` pour installer **htop**
 
 ```configure: error: You may want to use --disable-unicode or install libncursesw```
 
