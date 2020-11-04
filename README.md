@@ -6,3 +6,5 @@ Cheat_sheets on several subjets broached in THP and THP-NEXT training courses :
 - RAILS - ACTIVERECORD - POSTGRESQL - HEROKU - CREDENTIALS
 - DOCKER
 - GEMSET
+- SYNCING A FORK
+- GNU/LINUX PROGRAM INSTALLATION
