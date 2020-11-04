@@ -39,7 +39,7 @@ Il faut les régler avant de lancer le `make`et relancer ensuite le `./configure
 
 # Exemples d'erreurs :
 
-**Extraction de l'archive : après le tar**
+* **Extraction de l'archive : après le tar**
 
 ```
 tar: This does not look like a tar archive
@@ -49,8 +49,7 @@ tar: Exiting with failure status due to previous errors
 
 `gzip -dc hello-0.2.tar.gz | tar -zxf -`
 
-**Après le `./configure`**
-(ici pour installer **htop**)
+* **Après le `./configure`(ici pour installer **htop**) **
 
 ```configure: error: You may want to use --disable-unicode or install libncursesw```
 
